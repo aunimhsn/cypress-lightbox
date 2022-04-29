@@ -167,4 +167,6 @@ describe('lightbox', () => {
         cy.dataCy('comment-author-0').should('not.exist', 'johndoe');
     });
 
+    // --
+
 });
