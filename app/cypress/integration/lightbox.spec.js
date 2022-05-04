@@ -156,15 +156,14 @@ describe('lightbox', () => {
         cy.dataCy('comment-input').clear().type('Magic!');
         cy.dataCy('comment-publish').click();
 
+        // Comment 3
+        cy.dataCy('comment-input').clear().type('Damn!');
+        cy.dataCy('comment-publish').click();
+
         // Delete Comment 2
         cy.dataCy('delete-comment-svg-1').click();
-        cy.dataCy('comment-body-1').should('not.exist', 'Awesome!');
+        cy.dataCy('comment-body-1').should('not.exist', 'Magic!');
         cy.dataCy('comment-author-1').should('not.exist', 'johndoe');
-
-        // Delete Comment 1
-        cy.dataCy('delete-comment-svg-0').click();
-        cy.dataCy('comment-body-0').should('not.exist', 'Awesome!');
-        cy.dataCy('comment-author-0').should('not.exist', 'johndoe');
     });
 
     // --
