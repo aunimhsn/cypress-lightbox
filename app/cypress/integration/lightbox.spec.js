@@ -162,8 +162,6 @@ describe('lightbox', () => {
 
         // Delete Comment 2
         cy.dataCy('delete-comment-svg-1').click();
-        cy.dataCy('comment-body-1').should('not.exist', 'Magic!');
-        cy.dataCy('comment-author-1').should('not.exist', 'johndoe');
     });
 
     // --
